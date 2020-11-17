@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-
-using Xamarin.Forms;
-
-namespace Github.Views
+﻿namespace Github.Views
 {
-    public partial class SeasonPage : ContentPage
+    public partial class SeasonPage
     {
-        public SeasonPage()
-        {
-            InitializeComponent();
-        }
+        public SeasonPage() => InitializeComponent();
     }
 }

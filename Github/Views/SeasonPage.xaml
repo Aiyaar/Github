@@ -1,17 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:viewmodel="clr-namespace:Github.ViewModels"
-             x:Class="Github.Views.SeasonPage">
-
-
-    
+<views:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:viewmodel="clr-namespace:Github.ViewModels"
+                xmlns:views="clr-namespace:Github.Views;assembly=Github"
+                xmlns:models="clr-namespace:Github.Models;assembly=Github"
+                x:Class="Github.Views.SeasonPage"
+                x:TypeArguments="viewmodel:SeasonsViewModel">
     <ContentPage.BindingContext>
-        <viewmodel:SeasonsViewModel/>
+        <viewmodel:SeasonsViewModel />
     </ContentPage.BindingContext>
-
-
-    <ContentPage.Content>
     <StackLayout VerticalOptions="Center" HorizontalOptions="StartAndExpand" Margin="10" BackgroundColor="#110F0D">
         
 
@@ -32,7 +29,7 @@
                 </CollectionView.ItemsLayout>
 
                 <CollectionView.ItemTemplate>
-                    <DataTemplate>
+                    <DataTemplate x:DataType="models:Season_Model">
 
                          <Grid Padding="10" Margin="10">
 
@@ -72,10 +69,4 @@
         -->
 
     </StackLayout>
-</ContentPage.Content>
-
-
-
-
-
-</ContentPage>
+</views:BasePage>
